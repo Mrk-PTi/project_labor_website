@@ -157,28 +157,27 @@
 			<!-- ------------------- Implementation design --------------------- -->
 			<section id="imp-design" class="centered">
 				<h2>Implementációs terv</h2>
-				<div class="card-container">
-					<div class="card">
-						<h3></h3>
-						<p></p>
-					</div>
-					<div class="card">
-						<h3></h3>
-						<p></p>
-						<h4></h4>
-						<ul>
-							<li></li>
-						</ul>
-					</div>
-					<div class="card">
-						<h3>Back-end</h3>
-						<p></p>
-					</div>
-					<div class="card">
-						<h3>Gameplay</h3>
-						<p></p>
-					</div>
-				</div>
+				<h3>Backend</h3>
+
+				<p>
+				Backend részen a kiszolgáló egy php-ban készült REST szolgáltatás lesz.<br>
+				Ez csatlakozik egy php myadminos szerver oldali adatbázishoz, ahonnan eljárások segítségével képes lesz adatokat lekérni, és felvinni, 
+				valamint képes továbbküldeni, és fogadni a kliens/kliensek által szolgáltatott adatokat.</p><br>
+				<h4>Metódusai:</h4>
+				<ul>
+					<li>Regisztráció</li>
+					<li>Login</li>
+					<li>Logout</li>
+					<li>Jelszóváltoztatás</li>
+					<li>Saját post lekérdezése</li>
+					<li>Összes post lekérdezése</li>
+					<li>Postokfeltöltése</li>
+					<li>Minden user lekérdezése (csak adminnak)</li>
+				</ul>
+				<h4>Webes felület:</h4>
+				<p>A webes felületet akár a backendet HTML / PHP alapon a Laravel framework által kínált lehetőségek segítségével fogjuk megoldani, 
+				az úgynevezett blade templating felhasználásával, melyet a framework nativan tartalmaz. Ennek segítségével egyszerűen alkalmazkodhatunk a backend rendszeres adat 
+				változásaira.</p>
 			</section>
 			<!-- ------------------- Test design --------------------- -->
 			<section id="test" class="centered">
