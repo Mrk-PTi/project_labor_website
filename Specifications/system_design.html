@@ -30,7 +30,6 @@
 				<li class="nav-item"><a href="#func-design">Funkcionális terv</a></li>
 				<li class="nav-item"><a href="#req-list">Követelmények</a></li>
 				<li class="nav-item"><a href="#physic-env">Fizikai környezet</a></li>
-				<li class="nav-item"><a href="#a-domain-mdl">Abstract domain model</a></li>
 				<li class="nav-item"><a href="#arch-design">Architekturális terv</a></li>
 				<li class="nav-item"><a href="#data-design">Adatbázis terv</a></li>
 				<li class="nav-item"><a href="#imp-design">Implementációs terv</a></li>
@@ -73,19 +72,52 @@
 			<!-- ------------------- Functional design --------------------- -->
 			<section id="func-design" class="centered">
 				<h2>Funkcionális terv</h2>
+				<h4>Rendszerszereplők:</h4>
 				<ul>
-					<li></li>
+					<li>Admin</li>
+					<li>User</li>
+				</ul>
+				<h4>Rendszerhasználati esetek és lefutásaik</h4>
+				<ul>
+					<li><b>Admin:</b></li>
 					<ul>
-						<li></li>
+						<li>Beléphet bármilyen userként teljes hozzáférése van a rendszerhez</li>
+						<li>A felhasználói adatokat látják, változtathatják (Jelszó titkosított)</li>
+						<li>Felhasználó hozzáadására, felfüggesztésére, törlésére van lehetőségük</li>
+						<li>Üzenetküldés bárkinek vagy globálisan</li>
+						<li>Felhasználói adatok módosítása</li>
+						<li>Postok létrehozása, törlése, módosítása</li>
+						<li>User kiléptetése a szerverről</li>
 					</ul>
-					<li></li>
+					<li><b>User:</b></li>
 					<ul>
-						<li></li>
+						<li>Saját adatlap szerkesztése</li>
+						<li>Képes üzenetet küldeni más felhasználóknak</li>
+						<li>Postok létrehozása, törlése, módosítása</li>
+						<li>Közös hírportál megtekintése</li>
 					</ul>
-					<li></li>
+				</ul>
+				<h4>Menü hierarchiák</h4>
+				<ul>
+					<li><b>Bejelentkezés:</b></li>
 					<ul>
-						<li></li>
+						<li>Bejelentkezés</li>
+						<li>Regisztráció</li>
 					</ul>
+					<li><b>Fő menü</b></li>
+					<ul>
+						<li>Home</li>
+						<li>Post létrehozás</li>
+						<li>Profil megtekintés</li>
+						<li>Top Postok</li>
+						<li>Kijelentkezés</li>
+					</ul>
+				</ul>
+				<h3>Postolás</h3>
+				<ul>
+					<li>Létrehozás</li>
+					<li>törlés</li>
+					<li>módosítás</li>
 				</ul>
 			</section>
 			<!-- ------------------- Requirements --------------------- -->
@@ -113,11 +145,6 @@
 					Weboldalunk mint minden weboldal PHP alapon nyugszik illetve adatbázist használunk mellé.
 					Adatmentések illetve felhasználó autentikációk is futni fognak a portálunkon.
 				</p>
-			</section>
-			<!-- ------------------- Abstract domain model --------------------- -->
-			<section id="a-domain-mdl" class="centered">
-				<h2>Abstract domain model</h2>
-				<p></p>
 			</section>
 			<!-- ------------------- Architectonical design --------------------- -->
 			<section id="arch-design" class="centered">
