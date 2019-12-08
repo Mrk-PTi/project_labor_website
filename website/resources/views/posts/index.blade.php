@@ -12,5 +12,7 @@
 			</div>
     	@endforeach
         {{$posts->links()}}
+    @else
+        <p>No posts available</p>
     @endif
 @endsection
