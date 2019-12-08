@@ -25,7 +25,7 @@
         
 
         <main class="py-4 container">
-            
+            @include('inc.messages')
             @yield('content')
         </main>
     </div>
