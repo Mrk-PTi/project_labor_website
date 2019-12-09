@@ -39,4 +39,29 @@ class PostsController extends Controller
     {
         return view('posts.create');
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999'
+        ]);
+
+        // Create Post
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
+        $post->cover_image = $fileNameToStore;
+        $post->save();
+
+        return redirect('/posts')->with('success', 'Post Created');
+    }
 }
