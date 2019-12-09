@@ -82,6 +82,18 @@ class PostsController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $post = Post::find($id);
+        return view('posts.show')->with('post', $post);
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
