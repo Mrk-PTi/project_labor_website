@@ -54,6 +54,22 @@ class PostsController extends Controller
             'cover_image' => 'image|nullable|max:1999'
         ]);
 
+        if($request->hasFile('cover_image')){
+            //Filename & Extension
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            //Just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //Just extension
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            //Store filename
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            //Upload
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+
+        } else {
+            $fileNameToStore = 'noimage.jpg';
+        }
+
         // Create Post
         $post = new Post;
         $post->title = $request->input('title');
