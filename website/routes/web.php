@@ -18,6 +18,7 @@ Route::get('/services', 'PagesController@services');
 Route::get('/posts/', 'PostsController@index');
 Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/store', 'PostsController@store');
+Route::get('/posts/show', 'PostsController@show');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
