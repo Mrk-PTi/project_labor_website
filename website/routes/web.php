@@ -21,6 +21,7 @@ Route::get('/posts/store', 'PostsController@store');
 Route::get('/posts/show', 'PostsController@show');
 Route::get('/posts/edit', 'PostsController@edit');
 Route::get('/posts/update', 'PostsController@update');
+Route::get('/posts/destroy', 'PostsController@destroy');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
