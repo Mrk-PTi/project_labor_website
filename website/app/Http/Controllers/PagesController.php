@@ -10,3 +10,4 @@ class PagesController extends Controller
         $title = 'Welcome To Our Website!';
         return view('pages.index')->with('title', $title);
     }
+}
