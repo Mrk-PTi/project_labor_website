@@ -20,6 +20,7 @@ Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/store', 'PostsController@store');
 Route::get('/posts/show', 'PostsController@show');
 Route::get('/posts/edit', 'PostsController@edit');
+Route::get('/posts/update', 'PostsController@update');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
