@@ -19,24 +19,32 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function testBasicTest()
+    public function routeAboutTest()
     {
         $response = $this->get('/about');
 
         $response->assertStatus(200);
     }
 
-    public function testBasicTest()
+    public function routeServiceTest()
     {
         $response = $this->get('/services');
 
         $response->assertStatus(200);
     }
 
-    public function testBasicTest()
+    public function routePostTest()
     {
         $response = $this->get('/posts');
 
         $response->assertStatus(200);
     }
+
+    public function seePostsAsAuthenticatedUser()
+    {
+        $this->actingAs(factory(User::class)->create());
+
+        $response->$this->get('/customers')->assertOk();
+    }
+
 }
