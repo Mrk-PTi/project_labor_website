@@ -11,19 +11,16 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-              <a class="nav-link" href="/">Home</a>
+              <a class="nav-link" href="{{ route('dashboard') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="{{ route('about') }}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/services">Services</a>
+                <a class="nav-link" href="posts">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/posts">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/posts/create">Create Post</a>
+                <a class="nav-link" href="posts/create">Create Post</a>
               </li>
             </ul>
             <!-- Right Side Of Navbar -->
